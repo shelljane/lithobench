@@ -1,0 +1,9 @@
+BEGIN     /* The metadata are invalid */
+EQUIV  1  1000  MICRON  +X,+Y
+CNAME Temp_Top
+LEVEL M1
+
+CELL Temp_Top PRIME
+   PGON N M1  24 0 24 70 94 70 94 0
+   PGON N M1  404 0 404 70 474 70 474 0
+ENDMSG

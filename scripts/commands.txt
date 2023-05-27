@@ -1,0 +1,35 @@
+run3090x1 scripts/runGANOPC.sh log/MetalSetGANOPC.log
+run3090x1 scripts/runNeuralILT.sh log/MetalSetNeuralILT.log
+run3090x1 scripts/runCFNOILT.sh log/MetalSetCFNOILT.log
+run3090x1 scripts/runDAMOILT.sh log/MetalSetDAMOILT.log
+run3090x1 scripts/runLithoGAN.sh log/MetalSetLithoGAN.log
+run3090x1 scripts/runDOINN.sh log/MetalSetDOINN.log
+run3090x1 scripts/runCFNOLitho.sh log/MetalSetCFNOLitho.log
+run3090x1 scripts/runDAMOLitho.sh log/MetalSetDAMOLitho.log
+
+tail -f log/MetalSetGANOPC.log
+tail -f log/MetalSetNeuralILT.log
+tail -f log/MetalSetCFNOILT.log
+tail -f log/MetalSetDAMOILT.log
+tail -f log/MetalSetLithoGAN.log
+tail -f log/MetalSetDOINN.log
+tail -f log/MetalSetCFNOLitho.log
+tail -f log/MetalSetDAMOLitho.log
+
+run3090x1 scripts/runGANOPC.sh log/ViaSetGANOPC.log
+run3090x1 scripts/runNeuralILT.sh log/ViaSetNeuralILT.log
+run3090x1 scripts/runCFNOILT.sh log/ViaSetCFNOILT.log
+run3090x1 scripts/runDAMOILT.sh log/ViaSetDAMOILT.log
+run3090x1 scripts/runLithoGAN.sh log/ViaSetLithoGAN.log
+run3090x1 scripts/runDOINN.sh log/ViaSetDOINN.log
+run3090x1 scripts/runCFNOLitho.sh log/ViaSetCFNOLitho.log
+run3090x1 scripts/runDAMOLitho.sh log/ViaSetDAMOLitho.log
+
+tail -f log/ViaSetGANOPC.log
+tail -f log/ViaSetNeuralILT.log
+tail -f log/ViaSetCFNOILT.log
+tail -f log/ViaSetDAMOILT.log
+tail -f log/ViaSetLithoGAN.log
+tail -f log/ViaSetDOINN.log
+tail -f log/ViaSetCFNOLitho.log
+tail -f log/ViaSetDAMOLitho.log
