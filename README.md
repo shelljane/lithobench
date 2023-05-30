@@ -53,4 +53,37 @@ You can test the ILT method in LithoBench with the following commands:
 CUDA_VISIBLE_DEVICES=0 python3 pyilt/curvmulti.py
 ```
 
+## Download the dataset
+
+### LithoBench Data
+
+Please download the pre-trained models from
+
+```
+https://mycuhk-my.sharepoint.com/:u:/g/personal/1155186650_link_cuhk_edu_hk/EclDi3AoXlpKjWP4zUIf2uQBbiWR9YJGh3l9GSHponumhQ?e=F1K9xd
+```
+
+Put the lithomodels.tar.gz into the work/ directory and unzip it with: 
+
+```
+tar xvfz lithodata.tar.gz
+```
+
+### Pre-trained Models
+
+Please download the pre-trained models from
+
+```
+https://mycuhk-my.sharepoint.com/:u:/g/personal/1155186650_link_cuhk_edu_hk/EZ54weC7YNdLqzxPAa--OpsBrcupd78KzRNICp2P0ggALQ?e=J9N4MJ
+```
+
+Put the lithomodels.tar.gz into the work/ directory and unzip it with: 
+
+```
+tar xvfz lithomodels.tar.gz
+```
+
+## Train and Test the Models
+
+Please refer to scripts/runNeuralILT.sh
 
