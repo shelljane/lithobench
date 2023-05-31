@@ -83,9 +83,10 @@ Put the lithomodels.tar.gz into the work/ directory and unzip it with:
 tar xvfz lithomodels.tar.gz
 ```
 
+
 ## Train and Test the Models
 
-Please refer to scripts/runNeuralILT.sh
+Please refer to scripts/runNeuralILT.sh. 
 
 To train a model on MetalSet: 
 
@@ -110,4 +111,20 @@ python3 lithobench/test.py -m NeuralILT -s MetalSet -l saved/MetalSet_NeuralILT/
 >* Note that when evaluting the model on StdMetal, the trained model saved/MetalSet_NeuralILT/net.pth should also be used.
 >* Replacing "MetalSet" with "ViaSet" can evaluate the model on ViaSet. 
 >* Note that when evaluting the model on StdContact, the trained model saved/ViaSet_NeuralILT/net.pth should also be used.
+
+
+## Train and Test a New Model
+
+Please refer to dev/swin.py and dev/run.sh. 
+
+To train the new model "dev/swin.py" on MetalSet: 
+
+```
+python3 lithobench/train.py -m dev/swin.py -a SwinILT -i 512 -t ILT -o dev -s MetalSet -n 4 -b 4 -p True
+```
+
+>* "-m dev/swin.py" specifies path of the model. 
+>* The model should inherit the "lithobench.model.ModelILT" class
+>* "-a SwinILT" indicated the alias and also the class name of the model
+>* "-o dev" specifies the output directory of the training process
 
