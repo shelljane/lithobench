@@ -87,3 +87,27 @@ tar xvfz lithomodels.tar.gz
 
 Please refer to scripts/runNeuralILT.sh
 
+To train a model on MetalSet: 
+
+```
+python3 lithobench/train.py -m NeuralILT -s MetalSet -n 8 -b 12 -p True
+```
+
+>* "-m NeuralILT" specifies the NeuralILT model to train. 
+>* "-s MetalSet" means training on MetalSet.
+>* "-n" and "-b" decide the number of epochs and the batch size. 
+>* "-p True" indicates that it needs pre-training. 
+>* Replacing "MetalSet" with "ViaSet" can train the model on ViaSet. 
+
+
+To evaluate the model on MetalSet: 
+
+```
+python3 lithobench/test.py -m NeuralILT -s MetalSet -l saved/MetalSet_NeuralILT/net.pth
+```
+
+>* By default, the trained model will be saved in saved/\<training set\>_\<model name\>/.
+>* Note that when evaluting the model on StdMetal, the trained model saved/MetalSet_NeuralILT/net.pth should also be used.
+>* Replacing "MetalSet" with "ViaSet" can evaluate the model on ViaSet. 
+>* Note that when evaluting the model on StdContact, the trained model saved/ViaSet_NeuralILT/net.pth should also be used.
+
