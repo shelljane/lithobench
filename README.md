@@ -57,10 +57,10 @@ CUDA_VISIBLE_DEVICES=0 python3 pyilt/curvmulti.py
 
 ### LithoBench Data
 
-Please download the pre-trained models from
+Please download the data from
 
 ```
-https://mycuhk-my.sharepoint.com/:u:/g/personal/1155186650_link_cuhk_edu_hk/EclDi3AoXlpKjWP4zUIf2uQBbiWR9YJGh3l9GSHponumhQ?e=F1K9xd
+https://drive.google.com/file/d/1MzYiRRxi8Eu2L6WHCfZ1DtRnjVNOl4vu/view?usp=sharing
 ```
 
 Put the lithomodels.tar.gz into the work/ directory and unzip it with: 
@@ -74,7 +74,7 @@ tar xvfz lithodata.tar.gz
 Please download the pre-trained models from
 
 ```
-https://mycuhk-my.sharepoint.com/:u:/g/personal/1155186650_link_cuhk_edu_hk/EZ54weC7YNdLqzxPAa--OpsBrcupd78KzRNICp2P0ggALQ?e=J9N4MJ
+https://drive.google.com/file/d/1N-VCv0gX49zzVWlwSs0yDqq2zKNQHKNB/view?usp=sharing
 ```
 
 Put the lithomodels.tar.gz into the work/ directory and unzip it with: 
