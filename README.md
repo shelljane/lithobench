@@ -122,6 +122,8 @@ LithoBench contains four models for lithography simulation, which located in lit
 The four models for mask optimization are in lithobench/ilt/. 
 The comments in the corresponding code show their performance on all sub-datasets. 
 
+Due to the wierd behaviors of some complex-valued layers on multiple GPUs, it is suggested to run some models on a single GPU, e.g. CFNO, DOINN,etc. 
+
 ## Train and Test a New Model
 
 lithobench/train.py and lithobench/test.py can train and test user-defined new models. 
