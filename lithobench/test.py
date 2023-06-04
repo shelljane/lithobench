@@ -31,6 +31,7 @@ def parseArgs():
     parser.add_argument("--load_dis", "-d", default="", type=str, help="Load discriminator weights")
     parser.add_argument("--eval", "-e", default=True, type=bool, help="Evaluation only")
     parser.add_argument("--output", "-o", default="saved", type=str, help="Folder for saving the weights and images")
+    parser.add_argument("--shots", "-c", default=False, action='store_true', help="Count the shots (slow) or not")
     return parser.parse_args()
 
 if __name__ == "__main__": 
@@ -112,7 +113,7 @@ if __name__ == "__main__":
             model.train(train_loader, val_loader, epochs=Epochs)
             model.save(ToSave)
         if Task == "ILT": 
-            model.evaluate(targets, finetune=True, folder=Folder)
+            model.evaluate(targets, finetune=True, folder=Folder, shot=args.shots)
         else: # Litho
             model.evaluate(Benchmark, ImageSize, BatchSize, NJobs, folder=Folder, samples=10)
     elif Benchmark == "StdMetal": 
@@ -120,7 +121,7 @@ if __name__ == "__main__":
             model.load(Filenames)
         if Task == "ILT": 
             targets = evaluate.getTargets(samples=None, dataset=Benchmark)
-            model.evaluate(targets, finetune=True, folder=Folder)
+            model.evaluate(targets, finetune=True, folder=Folder, shot=args.shots)
         else: # Litho
             loader = loadersAllLitho(Benchmark, (2048, 2048), BatchSize, NJobs)
             model.evaluate(Benchmark, ImageSize, BatchSize, NJobs, test_loader=loader, folder=Folder, samples=10)
@@ -139,7 +140,7 @@ if __name__ == "__main__":
             model.pretrain(train_loader, val_loader, epochs=Epochs)
         model.train(train_loader, val_loader, epochs=Epochs)
         if Task == "ILT": 
-            model.evaluate(targets, finetune=True, folder=Folder)
+            model.evaluate(targets, finetune=True, folder=Folder, shot=args.shots)
         else: # Litho
             loader = loadersAllLitho("StdContactTest", (2048, 2048), BatchSize, NJobs)
             model.evaluate(Benchmark, ImageSize, BatchSize, NJobs, test_loader=loader, folder=Folder, samples=10)

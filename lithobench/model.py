@@ -49,6 +49,9 @@ class ModelILT:
         pass
     
     def evaluate(self, targets, finetune=False, folder="images", shot=False): 
+        if shot == True: 
+            print(f"[ModelILT]: Warning, shot counting is enabled. The evaluation will be slow. ")
+            
         paramsInit = []
         masksInit = []
         runtimes = []

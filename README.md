@@ -98,25 +98,25 @@ Please refer to scripts/runNeuralILT.sh.
 To train a model on MetalSet: 
 
 ```
-python3 lithobench/train.py -m NeuralILT -s MetalSet -n 8 -b 12 -p True
+python3 lithobench/train.py -m NeuralILT -s MetalSet -n 8 -b 12
 ```
 
 >* "-m NeuralILT" specifies the NeuralILT model to train. 
 >* "-s MetalSet" means training on MetalSet.
 >* "-n" and "-b" decide the number of epochs and the batch size. 
->* "-p True" indicates that it needs pre-training. 
 >* Replacing "MetalSet" with "ViaSet" can train the model on ViaSet. 
 
 
 To evaluate the model on MetalSet: 
 
 ```
-python3 lithobench/test.py -m NeuralILT -s MetalSet -l saved/MetalSet_NeuralILT/net.pth
+python3 lithobench/test.py -m NeuralILT -s MetalSet -l saved/MetalSet_NeuralILT/net.pth --shots
 ```
 
 >* By default, the trained model will be saved in saved/\<training set\>_\<model name\>/.
 >* The sub-dataset specified by "-s" can be MetalSet, ViaSet, StdMetal, StdContact. 
 >* Note that to evaluate the model on StdMetal, the trained model saved/MetalSet_NeuralILT/net.pth should also be used. To evaluate the model on StdContact, the trained model saved/ViaSet_NeuralILT/net.pth should also be used.
+>* "--shots" enables the shot counting in the evaluation. It is slow so it is not enabled by default. 
 
 LithoBench contains four models for lithography simulation, which located in lithobench/litho/. 
 The four models for mask optimization are in lithobench/ilt/. 
@@ -175,7 +175,7 @@ Please refer to dev/swin.py and dev/run.sh.
 To train the new model "dev/swin.py" on MetalSet: 
 
 ```
-python3 lithobench/train.py -m dev/swin.py -a SwinILT -i 512 -t ILT -o dev -s MetalSet -n 4 -b 4 -p True
+python3 lithobench/train.py -m dev/swin.py -a SwinILT -i 512 -t ILT -o dev -s MetalSet -n 4 -b 4
 ```
 
 >* "-m dev/swin.py" specifies path of the model. 
@@ -186,5 +186,4 @@ python3 lithobench/train.py -m dev/swin.py -a SwinILT -i 512 -t ILT -o dev -s Me
 >* "-s MetalSet" specifies the dataset, which can be MetalSet and ViaSet. Note that StdMetal and StdContact are only for testing. 
 >* "-n 4" is the number of epochs. 
 >* "-b 4" is the batch size. 
->* "-p True" means that this model has the pretraining phase. "-p False" can skip pretraining. 
 
