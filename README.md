@@ -180,4 +180,7 @@ python3 lithobench/train.py -m dev/swin.py -a SwinILT -i 512 -t ILT -o dev -s Me
 >* "-t ILT" is for mask optimization. For lithography simulation, users can use "-t Litho". 
 >* "-o dev" specifies the output directory of the training process
 >* "-s MetalSet" specifies the dataset, which can be MetalSet and ViaSet. Note that StdMetal and StdContact are only for testing. 
+>* "-n 4" is the number of epochs. 
+>* "-b 4" is the batch size. 
+>* "-p True" means that this model has the pretraining phase. "-p False" can skip pretraining. 
 
