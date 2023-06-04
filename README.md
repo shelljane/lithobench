@@ -163,6 +163,7 @@ l2loss = F.mse_loss(printedNom, target)
 pvbloss = F.mse_loss(printedMax, printedMin)
 loss = l2loss + pvbloss
 ```
+*mask* is the output of the DNN model. *target* is the tensor of target images. 
 
 ## New Model -- an Example
 
