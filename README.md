@@ -138,6 +138,7 @@ train(self, train_loader, val_loader, epochs=1)
 The *train_loader* and *val_loader* are PyTorch DataLoaders. 
 For lithography simulation, the data loader outputs a batch of optimized masks, aerial images, and resist images. 
 For mask optimization, the data loader outputs a batch of target images and reference optimized masks. 
+It is okay to leave the *pretrain* function empty. 
 
 For the evaluation of the results, users can use the interface: 
 ```
