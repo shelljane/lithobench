@@ -84,7 +84,7 @@ Please download the pre-trained models from
 https://drive.google.com/file/d/1N-VCv0gX49zzVWlwSs0yDqq2zKNQHKNB/view?usp=sharing
 ```
 
-Put the lithomodels.tar.gz into the work/ directory and unzip it with: 
+Put the lithomodels.tar.gz into the saved/ directory and unzip it with: 
 
 ```
 tar xvfz lithomodels.tar.gz
