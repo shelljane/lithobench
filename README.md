@@ -90,6 +90,13 @@ Put the lithomodels.tar.gz into the saved/ directory and unzip it with:
 tar xvfz lithomodels.tar.gz
 ```
 
+### Code
+
+You may also download the code from: 
+```
+https://drive.google.com/file/d/1zDc3s1DBlgoJ_yGTBpF0J5G35Aqs5l1-/view?usp=sharing
+```
+
 ## Train and Test the Models
 
 Please refer to scripts/runNeuralILT.sh. 
